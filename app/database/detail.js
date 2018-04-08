@@ -28,13 +28,11 @@ function readGoods(data,filename){
     var goodsid=filename.match(/\-[^\)]*\./)[0].replace("\-","").replace("\.","");
     result.push(goodsid);
     if(!$('script[type="text/javascript"]').eq(6).html()){console.log(goodsid)}
-    result.push($('script[type="text/javascript"]').eq(6).html().match(reg)[1].
-    replace("[","").replace("]","").replace(/\"/g,"").trim());
+    result.push($('script[type="text/javascript"]').eq(6).html().match(reg)?$('script[type="text/javascript"]').eq(6).html().match(reg)[1].
+    replace("[","").replace("]","").replace(/\"/g,"").trim():"");
     result.push($(".mr10 .num").html().trim());
     result.push($(".J_SaleNum").html().trim());
     result.push($(".J_GoodsStock").html());
-
-    //console.log(result)
 
     insertGoods(result);
 

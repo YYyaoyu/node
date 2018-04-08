@@ -128,3 +128,6 @@ p{
 	position:absolute;
 	right:0;
 }
+.login-panel{
+	display:none;
+}
