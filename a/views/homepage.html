@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>咕了么</title>
+	<link href="/views/css/homepage.css" rel="stylesheet">
+    <script type="text/javascript" src="/public/js/jquery.min.js"></script>
+    <!--<script type="text/javascript" src="/public/js/bundle.js"></script>-->
+    <script type="text/javascript" src="/views/js/homepage.js"></script>
+    <script type="text/javascript">
+    	function login(){
+    		alert()
+    	}
+    </script>
+</head>
+<body>
+	<div class="login-panel">
+		<div class="login-mark">
+		</div>
+		<div class="login-con">
+			<form>
+				<p><input type="text" placeholder="用户名" name="username" id="username"/></p>
+				<p><input type="text" placeholder="密码" name="password" id="password"/></p>
+				<p><input type="text" placeholder="验证码" id="vericode"/></p>
+				<p><input type="submit" value="登录" id="loginbtn"/></p>
+                <p id="sublogin"><a href="#" id="fgtpsw">忘记密码</a><a href="/rgt" id="register">立即注册</a></p>
+			</form>
+		</div>
+	</div>
+	<div class="header">
+		<div class="header-con">
+			<img src="/public/images/logo.png" style="margin-top: 7px;width:200px;float:left;margin-left:50px;">
+			<div class="header-nav">
+				<ul>
+					<li><a href="index.html" style="color: #4AB344"><span style="color: #4AB344">首页</span></a></li>
+					<li><a href="hot.html">热卖</a> </li>
+					<li><a href="produ.html">全部产品</a> </li>
+					<li><a href="consult.html">最新资讯</a></li>
+					<li><a href="touch.html">联系我们</a> </li>
+					<li><a href="javascript:void(0)" onclick="login()">登录</a> </li>
+				</ul>
+
+
+			</div>
+			<div class="header-right">
+				<i class="iconfont" style="font-size: 16px;margin-right: 10px">&#xe7d5;</i>
+				我的购物车 ∨
+				<div class="hr-car">
+					<i class="iconfont" style="font-size: 40px;margin-right: 10px">&#xe633;</i>
+					您的购物车内暂时没有任何产品。
+				</div>
+			</div>
+		</div>
+	</div>
+    <div class="her-banner">
+        <img src="/public/images/banner.jpg" style="width:100%"/>
+    </div>
+    <div class="content">
+    	<div class="recommand">
+    		<div class="rec-nav">
+    			<h2>推荐 <span>RECOMMAND</span></h2>
+    		</div>
+    		<div class="rec-cont">                
+    			<ul></ul>
+    		</div>
+    	</div>
+    </div>
+	<script type="text/javascript">
+        
+        $("#loginbtn").on("click",function(){
+        	console.log($("form").serialize())
+        	$.ajax({
+        		url:'login',
+                type:'POST', //GET
+                async:true,    //或false,是否异步
+                data:$("form").serialize(),//{username:'sdbh',password:'dnmc'}
+                timeout:5000,    //超时时间
+                dataType:'',    //返回的数据格式：json/xml/html/script/jsonp/text
+
+                success:function(data,textStatus,jqXHR){
+                	console.log(data)
+                	if(data.msg){
+        	            alert("登录成功！");
+                	}else{
+                		alert("登录失败！");
+                	}
+                }, 
+                error:function(xhr,textStatus){
+        	        console.log('错误')
+                }
+            })
+        })
+	</script>
+</body>
+</html>
+

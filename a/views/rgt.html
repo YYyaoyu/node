@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册</title>
+	<script type="text/javascript" src="/public/js/jquery.min.js"></script>
+
+</head>
+<body>
+	<div class="register-con">
+		<form action="/register" method="post">
+			<p><input type="text" name="username" placeholder="用户名" id="username"/></p>
+			<p><input type="text" name="password" placeholder="密码" id="password"/></p>
+			<p id="register">注册</p>
+		</form>
+	</div>
+
+	<script type="text/javascript">
+        
+        $("#register").on("click",function(){
+        	$.ajax({
+        		url:'register',
+                type:'POST', //GET
+                async:true,    //或false,是否异步
+                data:$("form").serialize(),//{username:'sdbh',password:'dnmc'}
+                timeout:5000,    //超时时间
+                dataType:'',    //返回的数据格式：json/xml/html/script/jsonp/text
+
+                success:function(data,textStatus,jqXHR){
+        	        alert("注册成功！")
+                }, 
+                error:function(xhr,textStatus){
+        	        console.log('错误')
+                }
+            })
+        })
+	</script>
+</body>
+</html>

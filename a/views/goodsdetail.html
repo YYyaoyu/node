@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title><%= title %></title>
+	<link href="/views/css/goodsdetail.css" rel="stylesheet">
+    <script type="text/javascript" src="/public/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/views/js/goodsdetail.js"></script>
+</head>
+<body>
+<div class="goods-detail">
+	<div class="primary-goods clearfix">
+		<div class="fl goods-info-img" id="J_GoodsImg">
+			<div class="bigImg"><img src="<%= bigimg %>"/></div>
+			<div class="smallImg">
+				<ul>
+					<% for(var i in smallimg){%>
+					<li><img src=<%= smallimg[i] %> /></li>
+					<% }%>
+                </ul>
+			</div>
+		</div>
+		<div class="fl goods-info-normal" id="J_GoodsInfo">
+		    <div class="info-box">
+		        <h1 class="goods-title"><%= title %></h1>
+		        <div class="goods-main">
+		        	<dl class="property-box hide">
+		        		<dt class="property-type property-type-origin">价格：</dt>
+		        		<dd class="property-cont property-cont-origin">
+		        			<span id="J_OriginPrice" class="price">￥<%= orgprice %></span>
+		        		</dd>
+		        	</dl>
+
+		        	<dl class="property-box J_NowPrice_Wrap hide">  
+
+		        		<dt class="property-type property-type-now" >促销价：</dt>
+		        		<dd class="property-cont property-cont-now">
+		        			<span id="J_NowPrice" class="price" >￥<%= price %></span>
+
+		        		</dd>
+
+		        		<dd class="property-extra fr">
+		        			<span class="mr10">评价：
+		        				<span class="num"><%= assessnum %></span>
+		        			</span>
+		        			<span>累计销量：
+		        				<span class="num J_SaleNum"><%= sellnum %></span>
+		        			</span>
+		        		</dd>
+		        	</dl>
+		        </div>  
+		        <div class="goods-prowrap goods-sku" id="J_GoodsSku">
+		        	<div class="content">
+		        		<dl class="">
+		        			<dt>数量：</dt>
+		        			<dd class="num clearfix">
+		        				<div id="J_GoodsNum" class="goods-num fl">
+		        					<span class="num-reduce">-</span>
+		        					<input autocomplete="off" class="num-input" type="text" value="1" >
+		        					<span class="num-add ">+</span>
+		        				</div>
+		        				<div class="J_GoodsStock goods-stock fl"><%= stocknum %></div>
+		        				<div class="J_GoodsStockTip goods-stock-tip fl">您所填写的商品数量超过库存！</div>
+		        			</dd>
+		        		</dl>
+		        	</div>
+
+		        	<div class="goods-buy clearfix">
+		        		<a href="javascript:;" id="J_BuyNow" class="fl buy-btn">立刻购买</a>
+
+		        		<a href="javascript:;" id="J_BuyCart" class="fl buy-btn">加入购物车</a>
+		        	</div>
+		        </div>		            
+		    </div>
+		</div>
+	</div>
+	<div class="comment-goods">
+
+        <div class="comment-list">
+        	<h3>全部评价(<%= assessnum %>)</h3>
+            <div class="comment-content">
+            	<ul>
+
+            	</ul>
+            </div>
+        </div>
+	</div>
+</div>
+
+</body>
+</html>

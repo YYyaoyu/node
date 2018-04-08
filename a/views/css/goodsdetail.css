@@ -1,0 +1,177 @@
+dl,dt,dd{
+	margin:0;
+	color:#999;
+}
+a{
+	text-decoration:none;
+}
+ul{
+	margin:0;
+	padding:0;
+}
+li{
+	list-style:none;
+}
+img{
+	vertical-align:top;
+}
+h3{
+	margin:0;
+}
+.bigImg img{
+	width:300px;
+
+}
+.goods-info-img{
+	width:300px;
+	margin-right:50px;
+}
+.goods-info-normal{
+	width:550px;
+}
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+.info-box dt,.info-box dd{
+	display:inline-block;
+	height:30px;
+	line-height:30px;
+}
+.info-box dt{
+	vertical-align:top;
+}
+
+#J_NowPrice{
+	font-size:24px;
+	color:#000;
+	font-weight:bold;
+	display:inline-block;
+}
+.goods-num{
+	border:2px solid #ddd;
+	width:98px;
+	height:100%;
+	box-sizing:border-box;
+    font-size:0;
+}
+.num-reduce,.num-add{
+	display:inline-block;
+	font-size:24px;
+	width:20px;
+	height:36px;
+	line-height:36px;
+	text-align:center;
+	cursor:pointer;
+}
+.goods-num input{
+	border:none;
+	border-left:2px solid #ddd;
+	border-right:2px solid #ddd;
+	width:50px;
+	height:34px;
+	vertical-align:top;
+	text-align:center;
+}
+.info-box .content dt,.info-box .content dd{
+	height:40px;
+	line-height:40px;
+}
+.goods-stock{
+	margin-left:10px;
+}
+.goods-stock-tip{
+	color:red;
+}
+.goods-sku{
+	margin-top:20px;
+}
+.goods-buy{
+	margin-top:50px;
+	margin-left:50px;
+}
+.buy-btn{
+	width:160px;
+	height:50px;
+	line-height:50px;
+	text-align:center;
+	font-size:20px;
+}
+#J_BuyNow{
+	color:#fff;
+	background:red;
+	margin-right:50px;
+}
+#J_BuyCart{
+	color:#000;
+    border:1px solid #ddd;
+    box-sizing:border-box;
+}
+.clearfix{
+	overflow:hidden;
+}
+.goods-main{
+	background:#eee;
+	padding:10px;
+}
+#J_OriginPrice{
+	text-decoration:line-through;
+}
+.goods-detail{
+	width:1000px;
+	margin:0 auto;
+}
+
+.smallImg img{
+	width:50px;
+	height:50px;
+	cursor:pointer;
+}
+.smallImg li{
+	display:inline-block;
+	margin-right:10px;
+}
+.smallImg ul{
+	font-size:0;
+	text-align:center;
+}
+.avatar img{
+	width:50px;
+	border-radius:50%;
+}
+.comment-goods{
+	padding:0 100px;
+	margin-top:50px;
+}
+.primary-goods{
+	font-size:12px;
+}
+.comment-goods{
+	font-size:14px;
+}
+.info div{
+	margin-bottom:10px;
+}
+.info{
+	margin-left:20px;
+	width:600px;
+}
+.comment-list{
+	border:1px solid #ddd;
+	padding:30px;
+}
+.comment-content{
+	margin-top:40px;
+}
+.comment-content ul li{
+	margin-bottom:10px;
+}
+.bottom{
+	color:#aaa;
+}
+.info-img img{
+	width:100px;
+	height:150px;
+}

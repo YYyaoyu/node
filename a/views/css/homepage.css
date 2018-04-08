@@ -1,0 +1,130 @@
+body{
+	margin:0 auto;
+}
+li{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+ul{
+	padding:0;
+}
+p{
+	margin:0;
+	padding:0;
+}
+.header-right{
+	float:right;
+}
+.header-nav{
+	display:inline-block;
+	margin-left:100px;
+}
+.header-nav ul li{
+	float:left;
+	width:100px;
+	height:50px;
+	line-height:50px;
+	text-align:center;
+}
+.header-nav ul li a{
+	color:#000;
+}
+.header-nav ul{
+	overflow:hidden;
+}
+.content{
+	width:1200px;
+	margin:0 auto;
+}
+.second_Marketprice{
+	text-decoration:line-through;
+}
+.rec-cont ul{
+	overflow:hidden;
+}
+.rec-cont ul li{
+	width:200px;
+	height:410px;
+	float:left;
+	border:1px solid #aaa;
+	box-sizing:border-box;
+	margin:0 35px 25px 0;
+	cursor:pointer;
+	position:relative;
+}
+.rb-top{
+	color:#666;
+	font-size:14px;
+}
+.rcr-top img{
+	display:block;
+	width:100%;
+}
+.fk-prop-price{
+	font-size:16px;
+	font-weight:bold;
+}
+.second_Marketprice{
+	font-size:14px;
+}
+.rcr-bot{
+	padding:5px;
+}
+.second_P{
+    position:absolute;
+    bottom:10px;
+}
+.login-panel{
+	width:100%;
+	height:100%;
+
+}
+.login-mark{
+	position:absolute;
+	width:100%;
+	height:100%;
+	background:#000;
+	opacity:0.4;
+	top:0;
+	left:0;
+}
+.login-con{
+	position:absolute;
+	left:50%;
+	top:50%;
+	background:#fff;
+	padding:30px;
+}
+.login-con input{
+	margin-bottom:20px;
+	border:1px solid #aaa;
+	width:280px;
+	height:20px;
+	font-size:16px;
+	padding:10px;
+}
+#vericode{
+	width:200px;
+}
+#loginbtn{
+	width:302px;
+	padding:0;
+	background:#4AB344;
+	height:50px;
+	color:#fff;
+	cursor:pointer;
+}
+#sublogin{
+	font-size:12px;
+	position:relative;
+}
+#fgtpsw{
+	position:absolute;
+	left:0;
+}
+#register{
+	position:absolute;
+	right:0;
+}
